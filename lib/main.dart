@@ -51,19 +51,31 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/imagens/20140430_123226.jpg'),
+            image: AssetImage('assets/imagens/agenBank.jpg'),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              margin: EdgeInsets.all(20),
+              color: Colors.blueAccent,
+              child: const Text(
+                'FILA DE BANCO',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w900),
+              ),
+            ),
+            const SizedBox(height: 80),
             Text(
               estaCheio ? 'Lotado!' : 'Pode entrar!',
               // ignore: prefer_const_constructors
               style: TextStyle(
                 fontSize: 30,
-                color: estaCheio ? Colors.red : Colors.black,
+                color: estaCheio ? Colors.red : Colors.green,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -73,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 contador.toString(),
                 style: TextStyle(
                   fontSize: 100,
-                  color: estaCheio ? Colors.red : Colors.black,
+                  color: estaCheio ? Colors.red : Colors.green,
                   fontWeight: FontWeight.w700,
                 ),
               ),
